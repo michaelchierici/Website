@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 100%;
   padding: 20px 0;
   position: relative;
 `;
@@ -15,10 +15,8 @@ export const Menu = styled.nav`
 
 export const Container = styled.main`
   width: 70%;
-  height: 70%;
   background-color: gray;
   display: flex;
-  align-items: center;
   flex-direction: column;
   position: relative;
 `;
@@ -31,12 +29,9 @@ export const CardTitle = styled.div`
   margin-right: auto;
   position: relative;
   z-index: 10;
-  background: linear-gradient(
-    to right,
-    rgba(71, 115, 167),
-    rgba(22, 219, 101),
-    rgba(149, 239, 185)
-  );
+  background: ${({ theme }) => `linear-gradient(
+    to right, ${theme.colors.gradient})`};
+
   padding: 3px;
 `;
 
@@ -60,8 +55,8 @@ export const Circle = styled.div`
 export const Button = styled.button`
   width: 105px;
   height: 30px;
-  border-radius: 8.5px;
-  background-color: #16db65;
+  border-radius: 7px;
+  background-color: ${({ theme }) => theme.colors.button};
   border: none;
   z-index: 20;
   margin-right: auto;
@@ -70,7 +65,7 @@ export const Button = styled.button`
 
 export const Footer = styled.footer`
   width: 100%;
-  height: 5rem;
+  height: 5em;
   background-color: violet;
   margin-top: auto;
 `;
