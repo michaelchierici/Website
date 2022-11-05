@@ -6,11 +6,15 @@ import {
   Circle,
   Container,
   Footer,
+  Icon,
   Main,
   Menu,
   Title,
-} from "../../styles/pages/home";
+} from "../styles/pages/home";
+
 import menu from "../assets/menu.svg";
+import arrow from "../assets/arrow.svg";
+import { contactIcons } from "../constants/icons";
 
 export default function Home() {
   return (
@@ -21,18 +25,38 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <Menu>
-          <Image alt="" src={menu} width={50} height={50} />
-        </Menu>
         <Container>
           <CardTitle>
-            <Title>MICHAEL CHIERICI</Title>
+            <Title type="name">MICHAEL CHIERICI</Title>
+            <Title type="dev">DESENVOLVEDOR</Title>
+            <Title type="front">FRONT-END</Title>
             <Button>Resumo</Button>
           </CardTitle>
           <Circle />
+          <Menu>
+            <Image
+              alt="menu de opções de idioma"
+              src={menu}
+              width={50}
+              height={50}
+            />
+            <Image
+              alt="seta para alterar o conteúdo da página"
+              src={arrow}
+              width={60}
+              height={60}
+            />
+          </Menu>
         </Container>
+
+        <Footer>
+          {contactIcons.map((item, index) => (
+            <Icon key={index}>
+              <Image alt={item.name} src={item.icon} width={45} height={45} />
+            </Icon>
+          ))}
+        </Footer>
       </Main>
-      <Footer />
     </>
   );
 }
