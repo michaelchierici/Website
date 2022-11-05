@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import {
   Button,
   CardTitle,
@@ -9,6 +10,7 @@ import {
   Menu,
   Title,
 } from "../../styles/pages/home";
+import menu from "../assets/menu.svg";
 
 export default function Home() {
   return (
@@ -19,16 +21,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <Menu />
+        <Menu>
+          <Image alt="" src={menu} width={50} height={50} />
+        </Menu>
         <Container>
           <CardTitle>
-            <Title>Desenvolvedor front-end</Title>
+            <Title>MICHAEL CHIERICI</Title>
+            <Button>Resumo</Button>
           </CardTitle>
           <Circle />
-          <Button>Resumo</Button>
         </Container>
-        <Footer />
       </Main>
+      <Footer />
     </>
   );
 }

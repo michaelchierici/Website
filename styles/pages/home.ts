@@ -2,42 +2,58 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   width: 100%;
-  height: 100%;
-  padding: 20px 0;
+  padding: 25px 0;
   position: relative;
 `;
 
 export const Menu = styled.nav`
-  width: 100%;
+  width: 99%;
   height: 2rem;
-  background-color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 export const Container = styled.main`
-  width: 70%;
-  background-color: gray;
+  width: 90%;
+  height: 40em;
+
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
+  margin: auto;
 `;
 
 export const CardTitle = styled.div`
-  background-color: royalBlue;
-  width: 52%;
-  height: 13rem;
+  width: 40%;
+  height: 15rem;
   border-radius: 8px;
-  margin-right: auto;
   position: relative;
   z-index: 10;
-  background: ${({ theme }) => `linear-gradient(
-    to right, ${theme.colors.gradient})`};
-
-  padding: 3px;
+  margin-bottom: auto;
+  margin-left: 50px;
+  border: 1px solid;
 `;
 
 export const Title = styled.h1`
-  padding: 2rem;
-  color: white;
+  width: 332.39px;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+
+  background: linear-gradient(109.87deg, #16db65 31.49%, #1462bc 53.35%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  margin-left: 10px;
 `;
 
 export const Circle = styled.div`
@@ -46,26 +62,25 @@ export const Circle = styled.div`
   border-radius: 20rem;
   background-color: palevioletred;
   z-index: 0;
-  position: absolute;
-  bottom: 0;
-  top: 18%;
-  left: 40%;
+  position: relative;
+  margin-right: auto;
+  right: 5%;
 `;
 
 export const Button = styled.button`
   width: 105px;
   height: 30px;
-  border-radius: 7px;
-  background-color: ${({ theme }) => theme.colors.button};
+  border-radius: 8.5px;
   border: none;
+  background-color: ${({ theme }) => theme.colors.button};
+
   z-index: 20;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 200px;
 `;
 
 export const Footer = styled.footer`
   width: 100%;
   height: 5em;
-  background-color: violet;
   margin-top: auto;
 `;
