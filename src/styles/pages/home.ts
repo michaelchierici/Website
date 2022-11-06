@@ -6,7 +6,6 @@ interface TitleProps {
 
 export const Main = styled.div`
   height: 100vh;
-
   position: relative;
 
   display: flex;
@@ -15,21 +14,9 @@ export const Main = styled.div`
   padding: 25px 0;
 `;
 
-export const Menu = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-
-  margin-bottom: auto;
-
-  height: 56%;
-  padding-right: 16px;
-`;
-
 export const Container = styled.main`
   width: 100%;
-  height: 60em;
+  height: 100%;
 
   display: flex;
   flex-direction: row;
@@ -39,15 +26,24 @@ export const Container = styled.main`
   position: relative;
 `;
 
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 44.5%;
+  height: 100%;
+`;
+
 export const CardTitle = styled.div`
-  width: 40%;
-  height: 15rem;
+  width: 90%;
+  height: 26%;
 
   position: relative;
   z-index: 10;
 
+  margin-left: auto;
   margin-top: 100px;
-  margin-left: 50px;
   margin-bottom: auto;
 
   background: linear-gradient(
@@ -77,9 +73,6 @@ export const Title = styled.h1<TitleProps>`
   font-weight: ${({ theme, type }) =>
     type === "name" ? theme.font.weight.regular : theme.font.weight.light};
 
-  font-weight: ${({ theme, type }) =>
-    type === "dev" && theme.font.weight.extra_light};
-
   font-size: ${({ theme }) => theme.font.size.xxl}px;
 
   background: ${({ theme }) =>
@@ -89,57 +82,19 @@ export const Title = styled.h1<TitleProps>`
   background-clip: text;
   text-fill-color: transparent;
 
-  margin-top: 15px;
-  margin-left: 10px;
+  margin: 15px 0 0 10px;
 `;
 
 export const Circle = styled.div`
-  width: 25rem;
-  height: 25rem;
+  width: 35rem;
+  height: 35rem;
   border-radius: 20rem;
 
   position: relative;
   z-index: 0;
-  right: 5%;
+  right: 9.5%;
 
   margin-right: auto;
 
   background-color: rosybrown;
-`;
-
-export const Button = styled.button`
-  width: 9rem;
-  height: 2.5rem;
-
-  font-size: ${({ theme }) => theme.font.size.md}px;
-  font-weight: ${({ theme }) => theme.font.weight.light};
-
-  border-radius: 12px;
-  border: none;
-
-  background-color: ${({ theme }) => theme.colors.button};
-  color: ${({ theme }) => theme.colors.text_primary};
-
-  margin-top: 30px;
-  padding: 5px 22.5px;
-  cursor: pointer;
-`;
-
-export const Footer = styled.footer`
-  height: 5em;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  padding-left: 18px;
-`;
-
-export const Icon = styled.div`
-  padding: 0px 10px;
-  transition: transform 450ms;
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 `;

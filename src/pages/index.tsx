@@ -1,20 +1,16 @@
 import Head from "next/head";
-import Image from "next/image";
 import {
-  Button,
   CardTitle,
   Circle,
   Container,
-  Footer,
-  Icon,
+  Content,
   Main,
-  Menu,
   Title,
 } from "../styles/pages/home";
 
-import menu from "../assets/menu.svg";
-import arrow from "../assets/arrow.svg";
-import { contactIcons } from "../constants/icons";
+import Menu from "../components/Menu";
+import Button from "../components/Button";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -26,36 +22,18 @@ export default function Home() {
       </Head>
       <Main>
         <Container>
-          <CardTitle>
-            <Title type="name">MICHAEL CHIERICI</Title>
-            <Title type="dev">DESENVOLVEDOR</Title>
-            <Title type="front">FRONT-END</Title>
-            <Button>Resumo</Button>
-          </CardTitle>
+          <Content>
+            <CardTitle>
+              <Title type="name">MICHAEL CHIERICI,</Title>
+              <Title type="dev">DESENVOLVEDOR</Title>
+              <Title type="front">FRONT-END</Title>
+            </CardTitle>
+            <Button title="Resumo" />
+            <Footer iconSize={45} />
+          </Content>
           <Circle />
-          <Menu>
-            <Image
-              alt="menu de opções de idioma"
-              src={menu}
-              width={50}
-              height={50}
-            />
-            <Image
-              alt="seta para alterar o conteúdo da página"
-              src={arrow}
-              width={60}
-              height={60}
-            />
-          </Menu>
+          <Menu menuSize={50} arrowSize={60} />
         </Container>
-
-        <Footer>
-          {contactIcons.map((item, index) => (
-            <Icon key={index}>
-              <Image alt={item.name} src={item.icon} width={45} height={45} />
-            </Icon>
-          ))}
-        </Footer>
       </Main>
     </>
   );

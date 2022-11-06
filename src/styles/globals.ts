@@ -29,6 +29,7 @@ export const theme = {
 
     text_gradient:
       "109.87deg, rgba(22,219, 101) 5.49%, rgba(71, 115, 167) 55.35%, 70%, rgba(149, 239, 185)",
+
     text_primary: "#000000",
     text_secondary: "#FFFFFF",
 
