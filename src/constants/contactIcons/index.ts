@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import Linkedin from "../assets/linkedin.svg";
-import Instagram from "../assets/instagram.svg";
-import Github from "../assets/github.svg";
-import Gmail from "../assets/gmail.svg";
+import React from "react";
+import Linkedin from "../../assets/contact/linkedin.svg";
+import Instagram from "../../assets/contact/instagram.svg";
+import Github from "../../assets/contact/github.svg";
+import Gmail from "../../assets/contact/gmail.svg";
 
 interface ContactIcons {
   name: string;

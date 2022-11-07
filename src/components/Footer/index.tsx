@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { contactIcons } from "../../constants/icons";
+import { contactIcons } from "../../constants/contactIcons";
 import { Container, Icon } from "../../styles/components/footer";
 
 interface Props {

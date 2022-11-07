@@ -31,7 +31,7 @@ export const Content = styled.div`
   align-items: center;
   flex-direction: column;
 
-  width: 44.5%;
+  width: 45%;
   height: 100%;
 `;
 
@@ -83,18 +83,4 @@ export const Title = styled.h1<TitleProps>`
   text-fill-color: transparent;
 
   margin: 15px 0 0 10px;
-`;
-
-export const Circle = styled.div`
-  width: 35rem;
-  height: 35rem;
-  border-radius: 20rem;
-
-  position: relative;
-  z-index: 0;
-  right: 9.5%;
-
-  margin-right: auto;
-
-  background-color: rosybrown;
 `;

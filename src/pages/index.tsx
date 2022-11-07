@@ -1,7 +1,6 @@
 import Head from "next/head";
 import {
   CardTitle,
-  Circle,
   Container,
   Content,
   Main,
@@ -11,6 +10,7 @@ import {
 import Menu from "../components/Menu";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
+import Photo from "../components/Photo";
 
 export default function Home() {
   return (
@@ -31,7 +31,7 @@ export default function Home() {
             <Button title="Resumo" />
             <Footer iconSize={45} />
           </Content>
-          <Circle />
+          <Photo active />
           <Menu menuSize={50} arrowSize={60} />
         </Container>
       </Main>
