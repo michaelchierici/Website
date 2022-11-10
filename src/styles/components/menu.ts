@@ -1,13 +1,53 @@
-import styled from "styled-components";
+import styled, { keyframes, css, ThemeContext } from "styled-components";
 
-export const Container = styled.nav`
+interface Props {
+  open: boolean;
+}
+
+function openMenu(degree: number) {
+  const open = keyframes`
+ 0% {
+  width: 0;
+  opacity: 0;
+
+    }
+    25% {
+      width: ${degree}px;
+
+    }
+    50% {
+      width: ${degree}px;
+
+    }
+    75% {
+      width: ${degree}px;
+
+    }  
+`;
+  return open;
+}
+
+export const Container = styled.nav<Props>`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
 
-  margin-bottom: auto;
+  height: 100%;
+  border-radius: 8px;
 
-  height: 56%;
-  padding-right: 16px;
+  background-color: ${({ open, theme }) =>
+    open && theme.colors.menu_background};
+  overflow: hidden;
+
+  width: ${({ open }) => open && "150px"};
+  animation: ${({ open }) =>
+    open
+      ? css`
+          ${openMenu(150)} 1s
+        `
+      : css`
+          ${openMenu(-100)} 1s
+        `};
+  transition: all 0.8s;
 `;

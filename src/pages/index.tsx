@@ -32,7 +32,7 @@ export default function Home() {
             <Footer iconSize={45} />
           </Content>
           <Photo active />
-          <Menu menuSize={50} arrowSize={60} />
+          <Menu menuSize={50} />
         </Container>
       </Main>
     </>

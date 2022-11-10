@@ -38,7 +38,7 @@ export const Icon = styled.div<Props>`
   transform-origin: 280px;
   position: absolute;
   left: 0;
-  transform: ${(ammount) => `rotate(calc(293deg / 15 * ${ammount.ammount}))`};
+  transform: ${({ ammount }) => `rotate(calc(293deg / 15 * ${ammount}))`};
 
   &:hover {
     transform: scale(0.1);

@@ -1,29 +1,28 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "../../styles/components/menu";
 
 import menu from "../../assets/menu.svg";
-import arrow from "../../assets/arrow.svg";
 
 interface Props {
   menuSize?: number;
-  arrowSize?: number;
 }
 
-export default function Button({ menuSize, arrowSize }: Props) {
+export default function Button({ menuSize }: Props) {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+
+  function handleOpen() {
+    setOpenMenu((prevState) => !prevState);
+  }
+
   return (
-    <Container>
+    <Container open={openMenu}>
       <Image
         alt="menu de opções de idioma"
         src={menu}
         width={menuSize}
         height={menuSize}
-      />
-      <Image
-        alt="seta para alterar o conteúdo da página"
-        src={arrow}
-        width={arrowSize}
-        height={arrowSize}
+        onClick={handleOpen}
       />
     </Container>
   );
